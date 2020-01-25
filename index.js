@@ -2,6 +2,8 @@ const express = require('express');
  
 
  var stream = require('stream');
+
+const app = express();
 //...
 app.get('/download', function(request, response){
   //...
@@ -15,7 +17,7 @@ app.get('/download', function(request, response){
 
   readStream.pipe(response);
 });
-const app = express();
+
  
 app.get('/', (req, res) => {
   res.send('How are you doing');
